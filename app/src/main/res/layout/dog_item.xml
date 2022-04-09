@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.apachat.swipereveallayout.core.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/dog_sl"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+
+    android:maxHeight="280dp"
+
+
+    android:layout_margin="10dp"
+    app:cardPreventCornerOverlap="true"
+
+    app:mode="normal"
+    app:minDistRequestDisallowParent="20dp"
+    app:dragEdge="right"
+    android:background="#e1edbd"
+    android:focusable="false">
+    <!-- Your secondary layout here -->
+    <LinearLayout
+        android:id="@+id/secondary_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        >
+        <TextView
+            android:id="@+id/info_dog_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#348862"
+            >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#706F6F"
+                android:text="Origin:"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/info_dog_origin_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="#706F6F"
+                android:text="Life span:"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/info_dog_life_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="#706F6F"
+                android:text="Temperament:"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/info_dog_temper_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!-- Your main layout here -->
+    <LinearLayout
+        android:id="@+id/main_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/dog_iv"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:maxHeight="180dp"
+
+            >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/dog_breed_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="55dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                >
+            </ImageButton>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:textColor="#504C4C"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+</com.apachat.swipereveallayout.core.SwipeLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="dog"
+            type="eu.tutorial.dogappdb.model.DogBreed" />
+        <variable
+            name="height"
+            type="eu.tutorial.dogappdb.model.Height" />
+        <variable
+            name="weight"
+            type="eu.tutorial.dogappdb.model.Weight" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".view.DetailFragment"
+            android:orientation="vertical"
+
+            android:background="#b0cf98"
+            >
+
+            <io.getstream.avatarview.AvatarView
+                android:id="@+id/detail_dog_iv"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+
+                app:avatarViewShape="rounded_rect"
+                app:avatarViewBorderWidth="5dp"
+                app:avatarViewBorderColor="#FFFFFF"
+
+                android:layout_marginTop="30dp"
+
+                android:scaleType="fitXY"
+                >
+
+            </io.getstream.avatarview.AvatarView>
+
+            <TextView
+                android:id="@+id/detail_dog_name_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#1e5631"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@{dog.name}"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+
+                android:useDefaultMargins="true"
+
+                android:background="#FFFFFF"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textSize="18sp"
+                    android:textColor="#426d54"
+                    android:text="Breed for:"/>
+                <TextView
+                    android:id="@+id/detail_dog_brfor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.bred}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Breed group:"/>
+                <TextView
+                    android:id="@+id/detail_dog_brgroup_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.breedGroup}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Life span:"/>
+                <TextView
+                    android:id="@+id/detail_dog_life_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.lifeSpan}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Origin:"/>
+                <TextView
+                    android:id="@+id/detail_dog_origin_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.origin}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Temperament:"/>
+                <TextView
+                    android:id="@+id/detail_dog_temperament_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.temperament}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Height:"/>
+                <TextView
+                    android:id="@+id/detail_dog_height_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.heigthMetric}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+
+                    android:textColor="#426d54"
+                    android:textSize="18sp"
+                    android:text="Weight:"/>
+                <TextView
+                    android:id="@+id/detail_dog_weight_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    android:text="@{dog.weigthMetric}"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+            </GridLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
